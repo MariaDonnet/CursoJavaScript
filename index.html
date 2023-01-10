@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
+  <title>AZORES</title>
+</head>
+
+<body>
+  <div class="row">
+    <h1>SISTEMA DE RESERVA DE VUELOS</h1>
+  </div>
+
+  <div class="row">
+    <div id="menu1" class="col-xs-12 col-md-6 col-lg-4">
+      <div class="about-item">
+        <div class="about-text">
+          <h3><a>Consultar Vuelos</a></h3>
+          <p>Consulte los vuelos y horarios disponibles</p>
+          <a class="btn btn-common btn-rm" href="#" onclick="app.mostrarVuelos();">Consultar</a>
+        </div>
+      </div>
+    </div>
+    <div id="menu2" class="col-xs-12 col-md-6 col-lg-4">
+      <div class="about-item">
+        <div class="about-text">
+          <h3><a>Consultar Reservas</a></h3>
+          <p>Consulte sus reservas por número de DNI</p>
+          <input id="docConsulta" class="mb-20 form-control" name="cedula" placeholder="Ingresa tu número de DNI">
+          <a class="btn btn-common btn-rm" href="#" onclick="app.consultarReserva();">Consultar</a>
+        </div>
+      </div>
+    </div>
+    <div id="campodoc" style="display: none;">
+      <form action="javascript:void(0);" method="POST" id="reserva-edit">
+        <p id="datosvuelo"></p>
+        <input type="text" id="documento" placeholder="Cedula de DNI">
+        <input type="submit" value="Reservar" />
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <table>
+          <tbody id="vuelos"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <br>
+  <a id="btnback" style="display: none;" href="#" class="btn btn-common btn-rm" onclick="app.Volver();">Volver</a>
+</div>
+</section>
+
+</body>
+
+</html>
